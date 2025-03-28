@@ -1,4 +1,4 @@
-# Quotes App - Entorno de Desarrollo
+# Quotes App - Development Environment
 
 <p align="center">
 <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
@@ -7,73 +7,73 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## Requisitos previos
+## Prerequisites
 
-Para ejecutar esta aplicación necesitarás:
+To run this application you will need:
 
-- PHP 8.1 o superior
-- Composer instalado
-- Node.js versión 20 o superior
-- Git (para clonar el repositorio)
+- PHP 8.1 or higher
+- Composer installed
+- Node.js version 20 or higher
+- Git (to clone the repository)
 
-## Configuración del entorno
+## Environment Setup
 
-### 1. Clonar el repositorio
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/yourusername/quotes.git
 cd quotes
 ```
 
-### 2. Configurar variables de entorno
+### 2. Configure environment variables
 
-Copia el archivo de ejemplo de variables de entorno:
+Copy the example environment variables file:
 
 ```bash
 cp .env.example .env
 ```
 
-Asegúrate de configurar correctamente las siguientes variables:
+Make sure to properly configure the following variables:
 
 ```
 CACHE_DRIVER=file
 ```
 
-### 3. Instalar dependencias
+### 3. Install dependencies
 
 ```bash
-# Instalar dependencias de PHP
+# Install PHP dependencies
 composer install
 
-# Instalar dependencias de Node.js
+# Install Node.js dependencies
 npm install
 ```
 
-### 4. Generar clave de aplicación
+### 4. Generate application key
 
 ```bash
 php artisan key:generate
 ```
 
-## Iniciar servidor de desarrollo
+## Starting the development server
 
-### Opción 1: Servidor de desarrollo de Laravel (recomendado)
+### Option 1: Laravel development server (recommended)
 
 ```bash
 php artisan serve
 ```
 
-Esto iniciará un servidor en `http://localhost:8000`
+This will start a server at `http://localhost:8000`
 
-### Opción 2: Configuración con Nginx
+### Option 2: Nginx configuration
 
-Si prefieres usar Nginx, aquí tienes una configuración básica:
+If you prefer using Nginx, here's a basic configuration:
 
 ```nginx
 server {
     listen 80;
     server_name quotes.local;
-    root /ruta/a/tu/proyecto/public;
+    root /path/to/your/project/public;
 
     index index.php;
 
@@ -89,30 +89,30 @@ server {
 }
 ```
 
-## Compilar assets
+## Compiling assets
 
-Para desarrollo:
+For development:
 
 ```bash
 npm run dev
 ```
 
-Para producción:
+For production:
 
 ```bash
 npm run build
 ```
 
-## Optimizar la aplicación
+## Optimizing the application
 
 ```bash
 php artisan optimize
 ```
 
-## ¡Listo!
+## Ready!
 
-¡Ya puedes disfrutar de Camilo App Quotes! Abre tu navegador y ve a `http://localhost:8000`.
+Now you can enjoy Camilo App Quotes! Open your browser and go to `http://localhost:8000`.
 
-## Licencia
+## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
