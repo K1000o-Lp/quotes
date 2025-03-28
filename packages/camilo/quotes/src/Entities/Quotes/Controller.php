@@ -2,6 +2,7 @@
 
 namespace Camilo\Quotes\Entities\Quotes;
 
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 
 class Controller
@@ -17,24 +18,32 @@ class Controller
          */
         $skip = request()->query('skip', 0);
 
-        $response = Http::get(config('quotes.base_url'), [
-            'skip' => $skip,
-            'limit' => $limit
-        ]);
+        $quotes = Cache::get("quotes:{$limit}:{$skip}");
 
-        return $response->json();
+        if(!$quotes) {
+            $response = Http::quotes()->get("", [
+                'skip' => $skip,
+                'limit' => $limit
+            ]);
+
+            $quotes = $response->object();
+
+            Cache::put("quotes:{$limit}:{$skip}", $quotes);
+        }
+
+        return response()->json($quotes);
     }
 
     public function show($id)
     {
-        $response = Http::get(config('quotes.base_url') . '/' . $id);
+        $response = Http::quotes()->get("/{$id}");
 
         return $response->json();
     }
 
     public function random()
     {
-        $response = Http::get(config('quotes.base_url') . '/random');
+        $response = Http::quotes()->get("/random");
 
         return $response->json();
     }
