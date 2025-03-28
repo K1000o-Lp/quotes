@@ -25,7 +25,7 @@ To run this application you will need:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/quotes.git
+git clone https://github.com/K1000o-Lp/quotes.git
 cd quotes
 ```
 
