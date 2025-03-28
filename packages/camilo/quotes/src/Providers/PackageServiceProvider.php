@@ -60,5 +60,10 @@ class PackageServiceProvider extends ServiceProvider
 
         // Load views
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'quotes');
+
+        $this->publishes([
+            __DIR__.'/../resources/js' => public_path('vendor/quotes/js'),
+            __DIR__.'/../resources/css' => public_path('vendor/quotes/css'),
+        ], 'quotes.assets');
     }
 }
