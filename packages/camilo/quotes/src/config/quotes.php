@@ -12,6 +12,6 @@ return [
     */
 
     'base_url' => env('QUOTES_BASE_URL', 'https://dummyjson.com/quotes'),
-    'request_per_time' => env('QUOTES_REQUEST_PER_TIME', 10),
+    'request_per_time' => env('QUOTES_REQUEST_PER_TIME', 60),
     'duration_time' => env('QUOTES_DURATION_TIME', 60),
 ];
