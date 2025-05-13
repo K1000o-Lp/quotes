@@ -63,44 +63,13 @@ composer install
 npm install
 ```
 
-### 4. Generate application key
+## Publish package assets
+
+Execute next commands:
 
 ```bash
-php artisan key:generate
-```
-
-## Starting the development server
-
-### Option 1: Laravel development server (recommended)
-
-```bash
-php artisan serve
-```
-
-This will start a server at `http://localhost:8000`
-
-### Option 2: Nginx configuration
-
-If you prefer using Nginx, here's a basic configuration:
-
-```nginx
-server {
-    listen 80;
-    server_name quotes.local;
-    root /path/to/your/project/public;
-
-    index index.php;
-
-    location / {
-        try_files $uri $uri/ /index.php?$query_string;
-    }
-
-    location ~ \.php$ {
-        fastcgi_pass unix:/var/run/php/php8.1-fpm.sock;
-        fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
-        include fastcgi_params;
-    }
-}
+# The flag --force is optional, use it when you want overwrite the assets because the package is updated  
+php artisan vendor:publish --tag=quotes.assets --force
 ```
 
 ## Compiling assets
