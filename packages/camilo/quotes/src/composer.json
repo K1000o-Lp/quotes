@@ -1,0 +1,18 @@
+{
+    "name": "camilo/quotes",
+    "description": "A Laravel package that consumes quote data from the https://dummyjson.com/quotes API",
+    "type": "package",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Camilo\\Quotes\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "K1000o-lp",
+            "email": "camiloalfonsolopezparra@gmail.com"
+        }
+    ],
+    "require": {}
+}
