@@ -22,11 +22,21 @@ To run this application you will need:
 
 ## Environment Setup
 
-### 1. Clone the repository
+### 1. Installation
+
+There are two options to install this application:
+
+#### Option 1: Clone the repository
 
 ```bash
 git clone https://github.com/K1000o-Lp/quotes.git
 cd quotes
+```
+
+#### Option 2: Via Composer
+
+```bash
+composer require camilo/quotes
 ```
 
 ### 2. Configure environment variables
