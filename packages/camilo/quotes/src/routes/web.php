@@ -25,7 +25,3 @@ Route::prefix('quotes-ui')->group(function () {
         });
     });
 });
-
-Route::get('/', function () {
-    return redirect()->route('quotes-ui.v1.quotes.index');
-});
