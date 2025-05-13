@@ -3,7 +3,7 @@
     "name": "camilo/quotes",
     "type": "package",
     "description": "A Laravel package that consumes quote data from the https://dummyjson.com/quotes API",
-    "keywords": ["laravel", "framework", "package", "quotes"],
+    "keywords": ["laravel", "framework", "package", "quotes", "dummyjson"],
     "license": "MIT",
     "require": {
         "php": "^8.2",
